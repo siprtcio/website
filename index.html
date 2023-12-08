@@ -1,148 +1,626 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>SipRTC - Private and Secure CPaaS</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-        <meta name="author" content="SoonLaunch">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.svg">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-		<!-- ========================= CSS here ========================= -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        	<link rel="stylesheet" href="assets/css/lineicons.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <title>SIPRTC | Private and Secure CPaaS</title>
+    <meta name="keywords"
+        content="Private CPaaS, communication platform as a service, Twilio alternative, REST APIs, XML elements, omnichannel, contact center, STT, TTS, conversational AI, on-premises, cloud">
+    <meta name="description"
+        content="Transform your business communications with MetaVM's Private CPaaS solution. Enjoy greater control, customizability, and security while providing your customers with a seamless omnichannel experience. Integrate with popular STT and TTS services and conversational AI platforms for enhanced efficiency. Deploy on-premises or in the cloud.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- ========================= main start ========================= -->
-        <main style="background: #F8F7FB;">
-            <!-- header start  -->
-            <div class="header header-04">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <a href="#" class="logo"> <img src="assets/img/logo.svg" alt=""> </a>
-                        </div>
-                        <div class="col-md-8">
-                            <!-- social-links start  -->
-                            <div class="social-links">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="#" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="assets/img/siplogo.svg" alt="SIPRTC">
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="#hero">HOME</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#applications">APPLICATIONS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li class="dropdown"><a href="#"><span>DEVELOPERS</span> <i
+                                class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="https://app.siprtc.io/dist/index-v1.html">QUICKSTARTS</a></li>
+                            <li class="dropdown"><a href="#"><span>TRY MORE APIs</span> <i
+                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
                                 <ul>
-                                    <li><a href="https://github.com/siprtcio/"><i class="lni lni-github-original"></i></a></li>
-                                    <li><a href="https://facebook.com/siprtcio"><i class="lni lni-facebook-filled"></i></a></li>
-                                    <li><a href="https://twitter.com/siprtcio"><i class="lni lni-twitter-filled"></i></a></li>
-                                    <li><a href="https://instagram.com/siprtcio"><i class="lni lni-instagram-original"></i></a></li>
+                                    <li><a href="#products">VOICE API</a></li>
+                                    <li><a href="#products">SMS API</a></li>
+                                    <li><a href="#products">VERIFICATIONS API</a></li>
                                 </ul>
-                            </div>
-                            <!-- social-links end  -->
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="https://app.siprtc.io/accounts/signup">SIGN UP</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero">
+        <div class="container position-relative">
+            <div class="row gy-5" data-aos="fade-in">
+                <div
+                    class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <h2>Your Vision, Our No-Code Magic.</span></h2>
+                    <p>API Platform for SMS, Voice, OTP Verifications, SMS/Voice Alerts and Notifications.</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="#about" class="btn-get-started">Get Started</a>
+                        <a href="https://www.youtube.com/watch?v=2USjyuR6yh4"
+                            class="glightbox btn-watch-video d-flex align-items-center"><i
+                                class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <img src="assets/img/hero-updateimage.svg" class="img-fluid" alt="Next-Generation Communication API with SIPRTC" data-aos="zoom-out"
+                        data-aos-delay="100">
+                </div>
+            </div>
+        </div>
+
+        <div class="icon-boxes position-relative" id="products">
+            <div class="container position-relative">
+                <div class="row gy-4 mt-5">
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-chat-left-text"></i></div>
+                            <h4 class="title">
+                                <a href="https://app.siprtc.io/dist/index-v1.html#section/WebHooksCallbacks/MessageSMS" class="stretched-link">
+                                    SMS API
+                                </a>
+                            </h4>
+                            <p>REST APIs to send and receive SMS in every country.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-telephone"></i></div>
+                            <h4 class="title">
+                                <a href="https://app.siprtc.io/dist/index-v1.html#tag/Call-Resource" class="stretched-link">
+                                    VOICE API
+                                </a>
+                            </h4>
+                            <p>REST APIs to make and receive voice calls in every country.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-check2-square"></i></div>
+                            <h4 class="title">
+                                <a href="https://app.siprtc.io/dist/index-v1.html#tag/OTPVerifications" class="stretched-link">
+                                    VERIFICATIONS API
+                                </a>
+                            </h4>
+                            <p>REST APIs to verify your phone over SMS and Call.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-command"></i></div>
+                            <h4 class="title"><a href="#contact" class="stretched-link">CALL TRACKING</a></h4>
+                            <p>Call Tracking will helps enterprise to distribute and track calls.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- header end  -->
-            <!-- ========================= main-wrapper start ========================= -->
-            <div class="main-wrapper demo-04">
-                <div class="container">
-                    <!-- hero-area start  -->
-                    <div class="hero-area">
-                        <div class="row align-items-center">
-                            <div class="col-xl-6 col-lg-6 col-md-12">
-                                <!-- cotent-wrapper start  -->
-                                <div class="content-wrapper">
-                                    <h1 class="wow fadeInLeft" data-wow-delay=".2s">Request for Early Release</h1>
-                                    <p class="wow fadeInRight" data-wow-delay=".4s">We are providing early access to beta customers, please help us with your official email-id!</p>
-                                    <!-- sunscribe-form start  -->
-                                    <form
-                                        action="https://siprtc.us21.list-manage.com/subscribe/post?u=14af2e9d85c0b9a573b6c8a5b&amp;id=a6ed149464&amp;f_id=00d4c1e1f0"
-                                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                        class="subscribe-form subscribe-form-2 validate wow fadeInUp"
-                                        data-wow-delay=".5s" target="_blank" >
-										<div class="mc-field-group">
-                                        <input type="email" placeholder="Enter your email address " name="EMAIL"
-                                            id="mce-EMAIL" class="required email" required />
-										</div>
+        </div>
 
-                                        <div id="mce-responses" class="clear">
-											<div class="response" id="mce-error-response" style="display:none"></div>
-											<div class="response" id="mce-success-response" style="display:none"></div>
-                                        </div>
-                                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-										<input type="text" name="b_14af2e9d85c0b9a573b6c8a5b_a6ed149464" tabindex="-1" value=""></div>
-                                        <!-- <button id="subscribe" class="sub_btn common-btn">Notify Me</button> -->
-										<button type="submit" name="subscribe" id="mc-embedded-subscribe subscribe" class="button sub_btn common-btn">Notify me</button>
-                                    </form>
-									<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-									<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                                    <!-- subscribe-form end  -->
-                                </div>
-                                <!-- content-wrapper end  -->
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <!-- img-wrapper start  -->
-                                <div class="img-wrapper wow fadeInLeft" data-wow-delay=".5s">
-                                    <img src="assets/img/img-1.jpg" alt="">
-                                </div>
-                                <!-- img-wrapper end  -->
-                            </div>
-                        </div> <!-- end row  -->
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <main id="main">
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>About Us</h2>
+                    <p>Realtime web app voice calling and messaging is bit overcomplicated. We help you solve it.</p>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="content ps-0 ps-lg-5">
+                            <p style="text-align: justify;">
+                                SIPRTC has been known for the realtime voice/message communications for companies to
+                                their customers on billions of devices around the world. Perfectly design for the IOT
+                                platform. Our intuitive communication REST APIs have been built in-house by some of the
+                                top telephony engineers in the business. We are using world class text to voice engine
+                                for excellent voice quality. Cutting edge technology used for the realtime calling and
+                                messaging applications for you.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> Over 1K+ customers world wide.</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Millions of minute and messages delivered
+                                    through our highly scalable platform.</li>
+                                <li><i class="bi bi-check-circle-fill"></i> World wide POP available for the realtime
+                                    communication over the internet.</li>
+                            </ul>
+                            <p class="fst-italic">
+                                Our realtime system helps you get realtime voice calling and messaging products on your
+                                plate.
+                            </p>
+                        </div>
                     </div>
-                    <!-- hero-area end  -->
-                    <!-- service-area start  -->
-                    <div class="service-area">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-5">
-                                <!-- service-img start  -->
-                                <div class="service-img wow fadeInRight" data-wow-delay=".4s">
-                                    <img src="assets/img/img-2.jpg" alt="">
-                                </div>
-                                <!-- service-img end  -->
-                            </div>
-                            <div class="col-xl-6 col-lg-7">
-                                <!-- service-list-wrapper start -->
-                                <div class="service-list-wrapper wow fadeInLeft" data-wow-delay=".4s">
-                                    <h3>Products and Services</h3>
-                                    <div class="service-list">
-                                        <ul>
-                                            <li><a href="#" rel="nofollow noopner" target="_blank">- Private CPaaS</a></li>
-                                            <li><a href="#" rel="nofollow noopner" target="_blank">- NLP APIs</a></li>
-                                            <li><a href="#" rel="nofollow noopner" target="_blank">- OpenSource Voip Consultancy</a></li>
-                                        </ul>
-                                        <ul>
-                                            <li><a href="#">- Privacy Policy</a></li>
-                                            <li><a href="#">- Terms and Condition</a></li>
-                                            <li><a href="#">- Tech Documentation</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- service-list-wrapper end  -->
-                                <!-- copyright start  -->
-                                <div class="copyright wow fadeInUp" data-wow-delay=".2s">
-                                    <p class="text-center text-lg-right">Powered By <a href="#" rel="nofollow noopener" target="_blank">Metavm Platform Private Ltd</a> </p>
-                                </div>
-                                <!-- copyright end  -->
-                            </div>
-                        </div> <!-- end row  -->
+                    <div class="col-lg-6">
+                        <div class="position-relative mt-0">
+                            <img src="assets/img/about-2.jpg" class="img-fluid rounded-4" alt="about SIPRTC">
+                            <a href="https://www.youtube.com/watch?v=QJ3_t4Fo750" class="glightbox play-btn"></a>
+                        </div>
                     </div>
-                    <!-- service-area end  -->
-                </div> <!-- end container  -->
+                </div>
+
             </div>
-            <!-- ========================= main-wrapper end ========================= -->
-        </main>
-        <!-- ========================= main end ========================= -->
-        
-		<!-- ========================= JS here ========================= -->
-        <script src="assets/js/wow.min.js"></script>
-        <script>
-            	// WOW active
-	            new WOW().init();
-        </script>
-    </body>
+        </section><!-- End About Us Section -->
+
+        <!-- ======= Our applications Section ======= -->
+        <section id="applications" class="applications sections-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Applications</h2>
+                    <p>Thousands of web applications some of them.</p>
+                </div>
+
+                <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item  position-relative">
+                            <div class="icon">
+                                <i class="bi bi-lock"></i>
+                            </div>
+                            <h3>OTP</h3>
+                            <p>Send OTP for authentication using our smart Verifications APIs. Use otp for the Two
+                                Factor Authentication and banking transactions.</p>
+                            <!-- <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-exclamation-circle"></i>
+                            </div>
+                            <h3>Alerts</h3>
+                            <p>Your monitoring system has alerts for critical condition for your system. Use our REST
+                                APIs to initiate SMS or voice call for an alert.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-bell"></i>
+                            </div>
+                            <h3>Notifications</h3>
+                            <p>Send notifications over the sms and voice to your valuable customers. Notifications help
+                                customer to come back on your platform again.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-play-circle"></i>
+                            </div>
+                            <h3>Click2Call</h3>
+                            <p>Click 2 Call helps companies to get in touch with customers instantly. This functionality
+                                can be integrated with website, Help desk and CRM. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-mic"></i>
+                            </div>
+                            <h3>Make Calls</h3>
+                            <p>MakeCall lets you automate personalize messages to your customers. This can be of
+                                reminders, updates, confirmation, payment status, etc.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-share"></i>
+                            </div>
+                            <h3>Call Masking</h3>
+                            <p>Call masking feature let's your customer to connect with your support executive without
+                                revealing your customer's personal identity ie. phone number.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-chat-square-text"></i>
+                            </div>
+                            <h3>SMS Broadcast</h3>
+                            <p>You can send bulk SMS from Siprtc Web Platform Dashboard. Send marketing sms all over the
+                                world using one mouse click.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-broadcast"></i>
+                            </div>
+                            <h3>Voice Call Broadcast</h3>
+                            <p>Play predefined marketing text using speak feature or play mp3 files to multiple phone
+                                numbers across the world.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="application-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <h3>IVR</h3>
+                            <p>You can allows enabling callers to interact with menus, collect information, and route
+                                calls using keypresses or voice commands for a more efficient and customized call
+                                experience from IVR.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Our applications Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                </div>
+                <div class="flow-boxes position-relative" id="products">
+                    <div class="container position-relative">
+                        <div class="row gy-3 mt-5">
+                            <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="flow-box">
+                                    <h4 class="title">Private CPaaS</h4>
+                                    <p>SIPRTC's Private CPaaS (Communication Platform as a Service) provides a
+                                        dedicated, customizable communication solution for businesses, ensuring secure
+                                        and tailored communication experiences.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="flow-box">
+                                    <h4 class="title">NLP APIs</h4>
+                                    <p>SIPRTC offers NLP APIs that empower developers to integrate NLP capabilities into
+                                        their applications for enhanced communication and
+                                        automation, enabling smarter interactions and responses.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flow-box">
+                                    <h4 class="title">Opensource VOIP Consultancy</h4>
+                                    <p>Explore SIPRTC's open-source VOIP consultancy solutions for cost-effective,
+                                        customizable communication systems that suit your specific needs and budget.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Services Section -->
+
+        <!-- ======= Call To Action Section ======= -->
+        <section id="call-to-action" class="call-to-action">
+            <div class="container text-center" data-aos="zoom-in">
+                <a href="https://www.youtube.com/watch?v=JHANlkTNsVs" class="glightbox play-btn"></a>
+                <h3>Turn ideas into reality with self-service app creation using no-code and low-code.</h3>
+                <a href="https://app.siprtc.io/accounts/signup" class="cta-btn">SIGN UP</a>
+                <a href="#contact" class="cta-btn">Contact us</a>
+            </div>
+        </section><!-- End Call To Action Section -->
+
+        <!-- ======= Flow Section ======= -->
+        <section id="flow" class="flow sections-bg">
+            <div class="container position-relative">
+                <div class="row gy-5" data-aos="fade-up">
+                    <div
+                        class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+                        <h2>No coding experiences? No problem.</span></h2>
+                        <p>You don’t have to be a developer to use SIPRTC. You can visually create, edit, and manage
+                            communication workflows too.</p>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <a href="https://app.siprtc.io/accounts/flow" class="btn-get-started">Try Flow</a>
+                            <a href="https://www.youtube.com/watch?v=2USjyuR6yh4"
+                                class="glightbox btn-watch-video d-flex align-items-center"><i
+                                    class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 rounded-4">
+                        <img src="assets/img/flows.jpg" class="img-fluid" alt="SIPRTC FLOW Builder" data-aos="zoom-out"
+                            data-aos-delay="100">
+                    </div>
+                </div>
+            </div>
+            <div class="flow-boxes position-relative" id="products">
+                <div class="container position-relative">
+                    <div class="row gy-3 mt-5">
+                        <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flow-box">
+                                <h4 class="title">Start for free. Pay as you go.</h4>
+                                <p>Keep your costs low. on SIPRTC, you pay as you go so you can control costs and scale
+                                    up as your use case grows.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flow-box">
+                                <h4 class="title">Launch your ideas quickly</h4>
+                                <p>Try your ideas for voice, messaging, and communication apps in a drag-and-drop flow
+                                    editor that’s easy to use.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="flow-box">
+                                <h4 class="title">Build IVRs for every user</h4>
+                                <p>Design IVRs systems that adapt and make smart responses to customer interactions by
+                                    leveraging artificial intelligence and versatile APIs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Flow Section -->
+
+        <!-- ======= Stats Counter Section ======= -->
+        <section id="stats-counter" class="stats-counter">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Why choose us?</h2>
+                    <p>Our highly scalable cloud platform handles millions of sms and voice calls concurrently.</p>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <h3>Communicate reliably</h3>
+                        <p>Experience a 99.95% uptime SLA made possible with automated failover and zero maintenance
+                            windows.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>No shenanigans</h3>
+                        <p>Get to market faster with pay-as-you-go pricing, free support, and the freedom to scale up or
+                            down without contracts.</p>
+                    </div>
+                </div>
+
+                <div class="row gy-4 align-items-center">
+                    <div class="col-lg-3">
+                        <div class="stats-item d-flex align-items-center">
+                            <span data-purecounter-start="0" data-purecounter-end="1000000"
+                                data-purecounter-duration="1" class="purecounter"></span>
+                            <p><strong>SMSs/Day</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="stats-item d-flex align-items-center">
+                            <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>Voice Calls/Day</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="stats-item d-flex align-items-center">
+                            <span data-purecounter-start="0" data-purecounter-end="500000" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>OTP Verification/Day</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="stats-item d-flex align-items-center">
+                            <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                                class="purecounter"></span>
+                            <p><strong>Hours Support</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Stats Counter Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact sections-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <p>Our expert team will answer within 24 hours.</p>
+                </div>
+
+                <div class="row gx-lg-0 gy-4">
+                    <div class="col-lg-4">
+                        <div class="info-container d-flex flex-column align-items-center justify-content-center">
+                            <div class="info-item d-flex">
+                                <div>
+                                    <h3>Become a next-gen business with us.</h3>
+                                </div>
+                            </div>
+
+                            <div class="info-item d-flex">
+                                <i class="bi bi-envelope flex-shrink-0"></i>
+                                <div>
+                                    <h4>Email:</h4>
+                                    <p>Sales: sales@siprtc.io</p>
+                                    <p>Support: support@siprtc.io</p>
+                                    <!-- <p>Career: hr@siprtc.io</p> -->
+                                </div>
+                            </div>
+
+                            <div class="info-item d-flex">
+                                <i class="bi bi-phone flex-shrink-0"></i>
+                                <div>
+                                    <h4>Call:</h4>
+                                    <p>+1 352 505 1111</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <form id="nextgen_form" role="form" class="nextgen-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="first_name" class="form-control" id="first_name"
+                                        placeholder="First Name*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="last_name" class="form-control" id="last_name"
+                                        placeholder="Last Name*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="company_name" class="form-control" id="company_name"
+                                        placeholder="Company Name*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="business_email" id="business_email"
+                                        placeholder="Business Email*" required>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <select name="country" class="form-control" id="country" required>
+                                        <option value="" disabled selected>Select Country*</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="tel" name="phone_number" class="form-control" id="phone_number"
+                                        placeholder="Phone Number*" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="7" placeholder="Message*"
+                                    required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center"><button type="submit" value="Submit">Submit</button></div>
+                        </form>
+                    </div>
+                    <!-- End Contact Form -->
+
+                </div>
+            </div>
+        </section><!-- End Contact Section -->
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-info">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <img src="assets/img/siplogo.svg" alt="SIPRTC">
+                    </a>
+                    <p>Cloud communications platform for building SMS, Voice & Messaging applications on an API built
+                        for global scale. Send and receive texts globally with the intuitive SMS API built for
+                        reliable, enterprise-grade messaging. Build the future of communication now.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://www.facebook.com/siprtc" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/siprtc/" class="linkedin"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.twitter.com/siprtc" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/lifeatsiprtc" class="instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/@siprtc" class="youtube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About SIPRTC</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#applications">Applications</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="https://app.siprtc.io/dist/index-v1.html#section/WebHooksCallbacks/MessageSMS">SMS API</a></li>
+                        <li><a href="https://app.siprtc.io/dist/index-v1.html#tag/Call-Resource">Voice API</a></li>
+                        <li><a href="https://app.siprtc.io/dist/index-v1.html#tag/OTPVerifications">Verifications API</a></li>
+                        <li><a href="#contact">Call Tracking</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="copyright">
+                Copyright &copy; 2023 <strong><span>SIPRTC</span></strong>. All Rights Reserved
+            </div>
+            <!-- <div class="credits">
+                Designed by <a href="https://www.siprtc.io/">SIPRTC</a>
+            </div> -->
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/nextgen-form/validate.js"></script>
+    <script src="assets/vendor/nextgen-form/countries.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
