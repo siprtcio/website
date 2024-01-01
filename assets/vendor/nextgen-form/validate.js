@@ -40,9 +40,9 @@ document.getElementById('nextgen_form').addEventListener('submit', function(even
   }
 
   // Validation for Business Email
-  if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(data.business_email)) {
-      displayError(this, errorMessages.business_email);
-      isValid = false;
+  if (!/^[a-zA-Z0-9._-]+@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(data.business_email)) {
+    displayError(this, errorMessages.business_email);
+    isValid = false;
   }
 
   // Validation for Phone Number
@@ -64,8 +64,15 @@ document.getElementById('nextgen_form').addEventListener('submit', function(even
   // Clear any existing error messages
   clearErrorMessages(this);
 
+  const isProduction = false; // Set to true in production, false in development
+
+  const submitUrl = isProduction
+    ? 'https://siprtc.io/'
+    : 'http://localhost:8080';
+  
+
   // Send the data to the Go server
-  fetch('/submit', {
+  fetch(`${submitUrl}/submit`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -73,17 +80,28 @@ document.getElementById('nextgen_form').addEventListener('submit', function(even
       }
   })
   .then(response => {
-      if (response.ok) {
-          // Handle a successful response here
-          console.log('Data submitted successfully!');
-          this.querySelector('.sent-message').classList.add('d-block');
-          this.reset();
+    if (response.ok) {
+        // Handle a successful response here
+        console.log('Your message has been sent.');
+        this.querySelector('.sent-message').classList.add('d-block');
+        this.reset();
       } else {
-          // Handle an error response here
-          console.error('Failed to submit data.');
-          displayError(this, 'Error submitting data to Google Sheets: ' + JSON.stringify(error));
+          console.error('Failed to submit data.', response.status, response.statusText);
+          return response.text();  
       }
+  })
+  .then(errorDetails => {
+      // Log additional error details if available
+    if (errorDetails !== undefined) {
+        console.error('Additional error details:', errorDetails);
+        displayError(this, 'Error submitting data to CRM.');
+    }
+  })
+  .catch(error => {
+      console.error('Unexpected error:', error);
+      displayError(this, 'An unexpected error occurred.');
   });
+
 
   function displayError(form, errorMessage) {
       form.querySelector('.loading').classList.remove('d-block');
